@@ -1,0 +1,255 @@
+{
+	"cv_data": {
+		"personal_info": [
+			{
+				"name": "Andrew Cabrera",
+				"contact": {
+					"email": "hi@andrew.cab",
+					"location": "Los Angeles, CA"
+				},
+				"languages": [
+					"English (Native)",
+					"Spanish (Fluent)",
+					"French (Beginner)"
+				],
+				"summary": "Software Engineer with over 8 years in software development, open-source contributions, and tech leadership. Expertise in full-stack and mobile development, DevOps, and artificial intelligence. Currently focused on building innovative solutions in the tech industry and looking for new roles."
+			}
+		],
+		"experience": [
+			{
+				"role": "Freelance Software Engineer",
+				"company": "Self-Employed",
+				"dates": "Jan 2020 – Present",
+				"location": "Remote",
+				"description": [
+					"Developed and maintained web applications using React, Node.js, and GraphQL",
+					"Designed and implemented RESTful APIs and microservices",
+					"Worked with cloud platforms like AWS and GCP for deployment and scaling",
+					"Utilized Docker and Kubernetes for containerization and orchestration",
+					"Spearheaded projects in machine learning and AI, including image recognition and natural language processing",
+					"Contributed to open-source projects and communities, focusing on accessibility and educational resources",
+					"Collaborated with clients to gather requirements and deliver high-quality software solutions",
+					"Implemented CI/CD pipelines with GitHub Actions and Docker",
+					"Worked on various projects including e-commerce platforms, educational tools, and mobile applications",
+					"Maintained network security and data privacy standards with encryption and secure coding practices for customer data with regards to HIPAA and GDPR compliance",
+					"Branched out into game development, creating AR/VR applications using Unity and Unreal Engine",
+					"Developed a personal portfolio website showcasing projects and skills"
+				],
+				"tags": [
+					"Freelance",
+					"Remote",
+					"Full-Stack",
+					"Mobile Development",
+					"DevOps",
+					"AI/ML"
+				]
+			},
+			{
+				"role": "iOS Engineer",
+				"company": "Dow Jones",
+				"dates": "Sept 2015 – April 2016",
+				"location": "New York City, NY",
+				"description": [
+					"Maintained bi-weekly/weekly sprints for two teams",
+					"Redesigned WSJ and Barron's iOS apps",
+					"Developed real-time election alert system",
+					"Architected Slingshot API tool for editorial data conversion",
+					"Implemented SAML/Single Sign-On authentication"
+				],
+				"tags": [
+					"iOS",
+					"Swift",
+					"Xcode",
+					"SAML",
+					"APIs",
+					"Mobile Development"
+				]
+			},
+			{
+				"role": "iOS Engineering Intern",
+				"company": "Dow Jones",
+				"dates": "June 2015 – Aug 2015",
+				"location": "New York City, NY",
+				"description": [
+					"Reduced crashes via XCode Server build system",
+					"Migrated Objective-C codebase to Swift",
+					"Developed Slack health monitoring bot",
+					"Created automated deployment tools with Grunt"
+				],
+				"tags": [
+					"iOS",
+					"Swift",
+					"Objective-C",
+					"CI/CD",
+					"Automation"
+				]
+			},
+			{
+				"role": "NYC Tech Talent Pipeline Fellow",
+				"company": "NYC Tech Talent Pipeline",
+				"dates": "Jan 2015 – Jun 2015",
+				"location": "New York City, NY",
+				"description": [
+					"Led diversity workshops for underrepresented groups in the NYC tech community",
+					"Mentored students in software development and career readiness",
+					"Developed a web application for NYC schools to track student progress",
+					"Created a mobile app for students to access educational resources",
+					"Collaborated with city officials and companies on tech initiatives",
+					"Participated in hackathons and tech events with companies such as Google, Facebook, and Microsoft"
+				],
+				"tags": [
+					"Education",
+					"Google",
+					"Facebook",
+					"Microsoft",
+					"Diversity",
+					"Ruby",
+					"Mobile Development",
+					"NYC",
+					"Web Development"
+				]
+			},
+			{
+				"role": "Apple Hardware Technician",
+				"company": "Apple",
+				"dates": "Feb 2013 – Jul 2013",
+				"location": "Philadelphia, PA",
+				"description": [
+					"Diagnosed and repaired Apple products",
+					"Performed BGA/SMD soldering",
+					"Trained new employees on service processes"
+				],
+				"tags": [
+					"Hardware Repair",
+					"Soldering",
+					"Customer Support"
+				]
+			}
+		],
+		"skills": [
+			{
+				"category": "Mobile Development",
+				"technologies": [
+					"Android (Java/Kotlin)",
+					"Jetpack Compose",
+					"iOS (Swift/Objective-C)",
+					"ARKit/Metal/Core ML",
+					"React Native"
+				],
+				"tags": [
+					"Android",
+					"iOS",
+					"Swift",
+					"Kotlin",
+					"Mobile Frameworks"
+				]
+			},
+			{
+				"category": "Web Development",
+				"technologies": [
+					"JavaScript/TypeScript",
+					"React/Svelte/Next.js",
+					"Node.js/Express",
+					"Docker/Kubernetes",
+					"GraphQL/Apollo",
+					"Leptos/Axum",
+					"Kubernetes/Helm",
+					"Ansible/Terraform",
+					"AWS/GCP/Azure",
+					"NixOS/Flakes",
+					"PostgreSQL/MySQL",
+					"Redis/MongoDB"
+				],
+				"tags": [
+					"Full-Stack",
+					"Frontend",
+					"Backend",
+					"Cloud"
+				]
+			},
+			{
+				"category": "Graphics & Game Engines",
+				"technologies": [
+					"OpenGL/Vulkan/DirectX",
+					"Unity/Unreal Engine",
+					"Three.js/Babylon.js",
+					"CUDA/OpenCL",
+					"OpenCV",
+					"TensorFlow/PyTorch"
+				],
+				"tags": [
+					"3D Graphics",
+					"Game Development",
+					"Computer Vision"
+				]
+			},
+			{
+				"category": "DevOps & Tools",
+				"technologies": [
+					"AWS/GCP/Azure",
+					"GitHub Actions/Jenkins/CircleCI",
+					"CI/CD Pipelines",
+					"PostgreSQL/MySQL",
+					"Redis/MongoDB",
+					"Postman",
+					"Linux/Unix",
+					"Docker/Kubernetes"
+				],
+				"tags": [
+					"DevOps",
+					"Cloud",
+					"Automation",
+					"Databases"
+				]
+			}
+		],
+		"education": [
+			{
+				"institution": "School of Visual Arts",
+				"degree": "B.A. in Human-Computer Interaction",
+				"dates": "2010–2012",
+				"field": "HCI & Design"
+			},
+			{
+				"institution": "University of the Arts",
+				"degree": "B.A. in Animation/Design",
+				"dates": "2012–2013",
+				"field": "Art + Technology"
+			},
+			{
+				"institution": "Flatiron School",
+				"degree": "Software Engineering Immersive",
+				"dates": "2014",
+				"field": "Software Engineering"
+			}
+		],
+		"open_source": [
+			{
+				"project": "Open-Source Contributor",
+				"description": "Contributed to open-source projects during medical leave, focusing on accessibility, community-driven development, and educational resources.",
+				"tags": [
+					"Open Source",
+					"Accessibility",
+					"Community"
+				]
+			}
+		],
+		"awards": {
+			"NYC Tech Talent Pipeline": "Top 5% acceptance rate fellowship",
+			"Dow Jones Hackathon": "Finalist with iOS prototype",
+			"Philadelphia Tech Week": "Best in Show award for AR app"
+		},
+		"certifications": {
+			"Certifications": [
+				"Apple Certified Mac Technician",
+				"Google Cloud Professional Developer",
+				"AWS Certified Solutions Architect"
+			]
+		}
+	},
+	"metadata": {
+		"version": "1.0",
+		"last_updated": "2025-04-07",
+		"author": "Andrew Cabrera"
+	}
+}

@@ -1,0 +1,262 @@
+[
+    {
+        "question": "What were Andrew Cabrera's responsibilities at Self-Employed?",
+        "answer": "Developed and maintained web applications using React, Node.js, and GraphQL\nDesigned and implemented RESTful APIs and microservices\nWorked with cloud platforms like AWS and GCP for deployment and scaling\nUtilized Docker and Kubernetes for containerization and orchestration\nSpearheaded projects in machine learning and AI, including image recognition and natural language processing\nContributed to open-source projects and communities, focusing on accessibility and educational resources\nCollaborated with clients to gather requirements and deliver high-quality software solutions\nImplemented CI/CD pipelines with GitHub Actions and Docker\nWorked on various projects including e-commerce platforms, educational tools, and mobile applications\nMaintained network security and data privacy standards with encryption and secure coding practices for customer data with regards to HIPAA and GDPR compliance\nBranched out into game development, creating AR/VR applications using Unity and Unreal Engine\nDeveloped a personal portfolio website showcasing projects and skills"
+    },
+    {
+        "question": "What technologies did Andrew use while working as a Freelance Software Engineer?",
+        "answer": "Freelance, Remote, Full-Stack, Mobile Development, DevOps, AI/ML"
+    },
+    {
+        "question": "What was Andrew Cabrera's role at Self-Employed?",
+        "answer": "Freelance Software Engineer"
+    },
+    {
+        "question": "Where did Andrew Cabrera work as a Freelance Software Engineer?",
+        "answer": "Self-Employed"
+    },
+    {
+        "question": "What were Andrew Cabrera's responsibilities at Dow Jones?",
+        "answer": "Maintained bi-weekly/weekly sprints for two teams\nRedesigned WSJ and Barron's iOS apps\nDeveloped real-time election alert system\nArchitected Slingshot API tool for editorial data conversion\nImplemented SAML/Single Sign-On authentication"
+    },
+    {
+        "question": "What technologies did Andrew use while working as a iOS Engineer?",
+        "answer": "iOS, Swift, Xcode, SAML, APIs, Mobile Development"
+    },
+    {
+        "question": "What was Andrew Cabrera's role at Dow Jones?",
+        "answer": "iOS Engineer"
+    },
+    {
+        "question": "Where did Andrew Cabrera work as a iOS Engineer?",
+        "answer": "Dow Jones"
+    },
+    {
+        "question": "What were Andrew Cabrera's responsibilities at Dow Jones?",
+        "answer": "Reduced crashes via XCode Server build system\nMigrated Objective-C codebase to Swift\nDeveloped Slack health monitoring bot\nCreated automated deployment tools with Grunt"
+    },
+    {
+        "question": "What technologies did Andrew use while working as a iOS Engineering Intern?",
+        "answer": "iOS, Swift, Objective-C, CI/CD, Automation"
+    },
+    {
+        "question": "What was Andrew Cabrera's role at Dow Jones?",
+        "answer": "iOS Engineering Intern"
+    },
+    {
+        "question": "Where did Andrew Cabrera work as a iOS Engineering Intern?",
+        "answer": "Dow Jones"
+    },
+    {
+        "question": "What were Andrew Cabrera's responsibilities at NYC Tech Talent Pipeline?",
+        "answer": "Led diversity workshops for underrepresented groups in the NYC tech community\nMentored students in software development and career readiness\nDeveloped a web application for NYC schools to track student progress\nCreated a mobile app for students to access educational resources\nCollaborated with city officials and companies on tech initiatives\nParticipated in hackathons and tech events with companies such as Google, Facebook, and Microsoft"
+    },
+    {
+        "question": "What technologies did Andrew use while working as a NYC Tech Talent Pipeline Fellow?",
+        "answer": "Education, Google, Facebook, Microsoft, Diversity, Ruby, Mobile Development, NYC, Web Development"
+    },
+    {
+        "question": "What was Andrew Cabrera's role at NYC Tech Talent Pipeline?",
+        "answer": "NYC Tech Talent Pipeline Fellow"
+    },
+    {
+        "question": "Where did Andrew Cabrera work as a NYC Tech Talent Pipeline Fellow?",
+        "answer": "NYC Tech Talent Pipeline"
+    },
+    {
+        "question": "What were Andrew Cabrera's responsibilities at Apple?",
+        "answer": "Diagnosed and repaired Apple products\nPerformed BGA/SMD soldering\nTrained new employees on service processes"
+    },
+    {
+        "question": "What technologies did Andrew use while working as a Apple Hardware Technician?",
+        "answer": "Hardware Repair, Soldering, Customer Support"
+    },
+    {
+        "question": "What was Andrew Cabrera's role at Apple?",
+        "answer": "Apple Hardware Technician"
+    },
+    {
+        "question": "Where did Andrew Cabrera work as a Apple Hardware Technician?",
+        "answer": "Apple"
+    },
+    {
+        "question": "What Mobile Development technologies does Andrew Cabrera know?",
+        "answer": "Android (Java/Kotlin), Jetpack Compose, iOS (Swift/Objective-C), ARKit/Metal/Core ML, React Native"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from School of Visual Arts?",
+        "answer": "B.A. in Human-Computer Interaction"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at School of Visual Arts?",
+        "answer": "HCI & Design"
+    },
+    {
+        "question": "When did Andrew Cabrera attend School of Visual Arts?",
+        "answer": "2010\u20132012"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from University of the Arts?",
+        "answer": "B.A. in Animation/Design"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at University of the Arts?",
+        "answer": "Art + Technology"
+    },
+    {
+        "question": "When did Andrew Cabrera attend University of the Arts?",
+        "answer": "2012\u20132013"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from Flatiron School?",
+        "answer": "Software Engineering Immersive"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at Flatiron School?",
+        "answer": "Software Engineering"
+    },
+    {
+        "question": "When did Andrew Cabrera attend Flatiron School?",
+        "answer": "2014"
+    },
+    {
+        "question": "What Web Development technologies does Andrew Cabrera know?",
+        "answer": "JavaScript/TypeScript, React/Svelte/Next.js, Node.js/Express, Docker/Kubernetes, GraphQL/Apollo, Leptos/Axum, Kubernetes/Helm, Ansible/Terraform, AWS/GCP/Azure, NixOS/Flakes, PostgreSQL/MySQL, Redis/MongoDB"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from School of Visual Arts?",
+        "answer": "B.A. in Human-Computer Interaction"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at School of Visual Arts?",
+        "answer": "HCI & Design"
+    },
+    {
+        "question": "When did Andrew Cabrera attend School of Visual Arts?",
+        "answer": "2010\u20132012"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from University of the Arts?",
+        "answer": "B.A. in Animation/Design"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at University of the Arts?",
+        "answer": "Art + Technology"
+    },
+    {
+        "question": "When did Andrew Cabrera attend University of the Arts?",
+        "answer": "2012\u20132013"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from Flatiron School?",
+        "answer": "Software Engineering Immersive"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at Flatiron School?",
+        "answer": "Software Engineering"
+    },
+    {
+        "question": "When did Andrew Cabrera attend Flatiron School?",
+        "answer": "2014"
+    },
+    {
+        "question": "What Graphics & Game Engines technologies does Andrew Cabrera know?",
+        "answer": "OpenGL/Vulkan/DirectX, Unity/Unreal Engine, Three.js/Babylon.js, CUDA/OpenCL, OpenCV, TensorFlow/PyTorch"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from School of Visual Arts?",
+        "answer": "B.A. in Human-Computer Interaction"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at School of Visual Arts?",
+        "answer": "HCI & Design"
+    },
+    {
+        "question": "When did Andrew Cabrera attend School of Visual Arts?",
+        "answer": "2010\u20132012"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from University of the Arts?",
+        "answer": "B.A. in Animation/Design"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at University of the Arts?",
+        "answer": "Art + Technology"
+    },
+    {
+        "question": "When did Andrew Cabrera attend University of the Arts?",
+        "answer": "2012\u20132013"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from Flatiron School?",
+        "answer": "Software Engineering Immersive"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at Flatiron School?",
+        "answer": "Software Engineering"
+    },
+    {
+        "question": "When did Andrew Cabrera attend Flatiron School?",
+        "answer": "2014"
+    },
+    {
+        "question": "What DevOps & Tools technologies does Andrew Cabrera know?",
+        "answer": "AWS/GCP/Azure, GitHub Actions/Jenkins/CircleCI, CI/CD Pipelines, PostgreSQL/MySQL, Redis/MongoDB, Postman, Linux/Unix, Docker/Kubernetes"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from School of Visual Arts?",
+        "answer": "B.A. in Human-Computer Interaction"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at School of Visual Arts?",
+        "answer": "HCI & Design"
+    },
+    {
+        "question": "When did Andrew Cabrera attend School of Visual Arts?",
+        "answer": "2010\u20132012"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from University of the Arts?",
+        "answer": "B.A. in Animation/Design"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at University of the Arts?",
+        "answer": "Art + Technology"
+    },
+    {
+        "question": "When did Andrew Cabrera attend University of the Arts?",
+        "answer": "2012\u20132013"
+    },
+    {
+        "question": "What degree did Andrew Cabrera earn from Flatiron School?",
+        "answer": "Software Engineering Immersive"
+    },
+    {
+        "question": "What was Andrew Cabrera's major at Flatiron School?",
+        "answer": "Software Engineering"
+    },
+    {
+        "question": "When did Andrew Cabrera attend Flatiron School?",
+        "answer": "2014"
+    },
+    {
+        "question": "Where is Andrew Cabrera based?",
+        "answer": "Los Angeles, CA"
+    },
+    {
+        "question": "What is Andrew Cabrera's summary?",
+        "answer": "Software Engineer with over 8 years in software development, open-source contributions, and tech leadership. Expertise in full-stack and mobile development, DevOps, and artificial intelligence. Currently focused on building innovative solutions in the tech industry and looking for new roles."
+    },
+    {
+        "question": "How many languages does Andrew Cabrera speak?",
+        "answer":  "Three. English, Spanish, and French."
+    },
+    {
+        "question": "What is Andrew Cabrera's email address?",
+        "answer": "hi@andrew.cab"
+    },
+    {
+        "question": "How was this website built?",
+        "answer": "The website was built in Rust using Axum for the backend, Leptos for the frontend, Bevy for the visualizations, and wasm-bindgen for custom Babylon.js bindings and audio processor used to play Amiga modules."
+    }
+]
