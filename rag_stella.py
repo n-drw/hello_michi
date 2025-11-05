@@ -60,7 +60,7 @@ def query_chatbot(user_query):
     top_doc = documents[I[0][0]]
     inputs = tokenizer(f"Query: {user_query}\nContext: {top_doc}", return_tensors="pt").to(device)
     with torch.no_grad():
-        outputs = model.generate(**inputs, max_length=1024)
+        outputs = model.generate(**inputs, max_length=4096)
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 print(query_chatbot("What projects have you worked on?"))

@@ -1,7 +1,7 @@
 from transformers import AutoModel, AutoTokenizer
 from datasets import load_dataset
 
-model = AutoModel.from_pretrained("NovaSearch/stella_en_400M_v5", trust_remote_code=True)
+model = AutoModel.from_pretrained("NovaSearch/stella_en_400M_v5", trust_remote_code=True, attn_implementation="eager")
 tokenizer = AutoTokenizer.from_pretrained("NovaSearch/stella_en_400M_v5", trust_remote_code=True)
 dataset = load_dataset("json", data_files="dataset/cv_dataset.json", split="train", streaming=True)
 
