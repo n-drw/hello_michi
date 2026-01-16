@@ -9,3 +9,8 @@ torch>=2.0.0
 accelerate>=0.20.3
 huggingface-hub>=0.19.4
 peft>=0.8.0
+
+# ONNX export for Burn compatibility
+onnx>=1.15.0
+optimum[exporters]>=1.16.0
+onnxruntime>=1.16.0
