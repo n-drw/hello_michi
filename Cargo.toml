@@ -1,12 +1,18 @@
 [package]
 name = "michibot"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
 
 [dependencies]
-burn = { version = "0.16.1", features = ["train", "wgpu", "dataset", "tui"] }
 tokenizers = { version = "0.21.1", default-features = false, features = [
   "onig",
   "http",
   "unstable_wasm",
 ] }
+
+[workspace]
+members = ["burn_inference"]
+resolver = "2"

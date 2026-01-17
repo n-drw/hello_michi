@@ -4,3 +4,4 @@
 /venv
 /chroma_db
 /onnx_models
+/burn_qoperator_model

@@ -147,6 +147,86 @@ def list_alternative_models():
     print("\n" + "=" * 80)
 
 
+def run_shape_inference(onnx_path: str) -> bool:
+    """
+    Run ONNX shape inference on the model.
+    
+    This is critical for Burn ONNX import - without shape inference,
+    intermediate tensor shapes are unknown and type inference fails.
+    """
+    try:
+        import onnx
+        from onnx import shape_inference
+        from onnx.external_data_helper import convert_model_to_external_data
+        from pathlib import Path
+        import shutil
+    except ImportError:
+        print("⚠️  onnx package not installed. Run: pip install onnx")
+        return False
+    
+    print(f"\n🔄 Running ONNX shape inference on {onnx_path}...")
+    
+    try:
+        onnx_path = Path(onnx_path)
+        model_dir = onnx_path.parent
+        
+        # Check if model uses external data
+        external_data_path = onnx_path.with_suffix('.onnx_data')
+        has_external_data = external_data_path.exists()
+        
+        # Load model with external data support
+        model = onnx.load(str(onnx_path), load_external_data=True)
+        
+        # Run shape inference
+        model = shape_inference.infer_shapes(model, data_prop=True)
+        
+        # Save back - handle external data properly
+        if has_external_data:
+            # For models with external data, we need to:
+            # 1. Remove old files
+            # 2. Convert model to use external data
+            # 3. Save to the same location
+            
+            # Backup and remove old external data
+            backup_data = model_dir / "model_backup.onnx_data"
+            if external_data_path.exists():
+                shutil.move(str(external_data_path), str(backup_data))
+            
+            try:
+                # Convert tensors to external data format
+                convert_model_to_external_data(
+                    model,
+                    all_tensors_to_one_file=True,
+                    location=external_data_path.name,
+                    size_threshold=1024,
+                )
+                
+                # Save the model (this creates new external data file)
+                onnx.save(model, str(onnx_path))
+                
+                # Remove backup on success
+                if backup_data.exists():
+                    backup_data.unlink()
+                    
+            except Exception as e:
+                # Restore backup on failure
+                if backup_data.exists():
+                    shutil.move(str(backup_data), str(external_data_path))
+                raise e
+        else:
+            onnx.save(model, str(onnx_path))
+        
+        print(f"✅ Shape inference completed successfully!")
+        return True
+        
+    except Exception as e:
+        print(f"⚠️  Shape inference failed: {e}")
+        print("   This may cause issues with Burn ONNX import.")
+        import traceback
+        traceback.print_exc()
+        return False
+
+
 def check_onnx_operators(onnx_path: str) -> Dict[str, List[str]]:
     """Analyze ONNX model for unsupported operators."""
     try:
@@ -155,7 +235,7 @@ def check_onnx_operators(onnx_path: str) -> Dict[str, List[str]]:
         print("⚠️  onnx package not installed. Run: pip install onnx")
         return {}
     
-    model = onnx.load(onnx_path)
+    model = onnx.load(onnx_path, load_external_data=False)
     
     # Operators that burn-import does NOT support
     unsupported_ops = {
@@ -184,6 +264,7 @@ def export_with_optimum(
     output_dir: str,
     opset_version: int = 17,
     no_post_process: bool = True,
+    fp16: bool = False,
 ) -> bool:
     """
     Export model using HuggingFace Optimum with decomposed operators.
@@ -206,15 +287,19 @@ def export_with_optimum(
     print(f"   Output: {output_path}")
     print(f"   Opset: {opset_version}")
     print(f"   No post-process (keeps decomposed ops): {no_post_process}")
+    print(f"   FP16 (half precision): {fp16}")
+    
+    # Use simpler task without KV cache for smaller model size
+    task = "text-generation"  # No KV cache - smaller but slower inference
     
     try:
         main_export(
             model_name_or_path=model_id,
             output=output_path,
-            task="text-generation-with-past", # KV cache
+            task=task,
             opset=opset_version,
             no_post_process=no_post_process,  # Prevent operator fusion
-            fp16=False,  # does Burn even support fp32 on WebGPU backend for ONNX? :)
+            fp16=fp16,  # Half precision reduces size by 50%
         )
         
         print(f"✅ Export completed successfully!")
@@ -222,6 +307,9 @@ def export_with_optimum(
         # Check for unsupported operators
         onnx_file = output_path / "model.onnx"
         if onnx_file.exists():
+            # Note: Shape inference should be run separately using Burn's onnx_opset_upgrade.py
+            # For models with external data, the script needs special handling
+            
             print("\n🔍 Analyzing exported model for Burn compatibility...")
             ops = check_onnx_operators(str(onnx_file))
             
@@ -307,6 +395,9 @@ def export_with_torch(
         )
         
         print(f"✅ Export completed: {onnx_path}")
+        
+        # Run shape inference for Burn compatibility
+        run_shape_inference(str(onnx_path))
         
         tokenizer.save_pretrained(output_path)
         print(f"✅ Tokenizer saved")
@@ -401,6 +492,11 @@ def main():
         default=512,
         help="Sequence length for export (torch method only)"
     )
+    parser.add_argument(
+        "--fp16",
+        action="store_true",
+        help="Export model in FP16 (half precision) - reduces size by 50%%"
+    )
     
     args = parser.parse_args()
     
@@ -439,6 +535,7 @@ def main():
             model_id=args.model,
             output_dir=args.output,
             opset_version=args.opset,
+            fp16=args.fp16,
         )
     else:
         success = export_with_torch(

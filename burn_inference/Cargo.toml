@@ -1,0 +1,15 @@
+[package]
+name = "burn_inference"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+burn = { path = "/Users/perro/work/burn/crates/burn", features = ["wgpu", "std"] }
+burn-store = { path = "/Users/perro/work/burn/crates/burn-store" }
+tokenizers = "0.21"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+
+[[bin]]
+name = "inference"
+path = "src/main.rs"
