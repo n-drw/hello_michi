@@ -840,10 +840,14 @@ name = "burn_inference"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "axum",
  "burn",
  "burn-store",
+ "serde",
+ "serde_json",
  "tokenizers",
  "tokio",
+ "tower-http",
 ]
 
 [[package]]

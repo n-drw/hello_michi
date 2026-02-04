@@ -1,3 +1,5 @@
+cargo-features = ["codegen-backend"]
+
 [package]
 name = "burn_inference"
 version = "0.1.0"
@@ -9,7 +11,32 @@ burn-store = { path = "/Users/perro/work/burn/crates/burn-store" }
 tokenizers = "0.21"
 tokio = { version = "1", features = ["full"] }
 anyhow = "1.0"
+axum = "0.8"
+tower-http = { version = "0.6", features = ["cors"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 
 [[bin]]
 name = "inference"
 path = "src/main.rs"
+
+[[bin]]
+name = "api_server"
+path = "src/api_main.rs"
+
+[profile.dev]
+codegen-backend = "cranelift"
+debug = 0
+opt-level = 1
+
+[profile.release]
+debug = 0
+lto = "off"        # Disable LTO for much faster linking (minor runtime cost)
+codegen-units = 14 # Parallel codegen (matches CPU cores)
+opt-level = 3      # Full optimization
+
+# Fast release build using cranelift (10-30% slower runtime, much faster compile)
+[profile.release-fast]
+inherits = "release"
+codegen-backend = "cranelift"
+opt-level = 2

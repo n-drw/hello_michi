@@ -1,0 +1,30 @@
+[env]
+MICHI_DATASET_PATH = { value = "/Users/perro/work/michi-api/dataset", force = true }
+
+[target.aarch64-apple-darwin]
+linker = "clang"
+rustflags = [
+  "-Csplit-debuginfo=unpacked",
+  "-Ccodegen-units=14",  # Parallel codegen (matches CPU cores)
+  "--cfg=has_std",
+  "-Clink-arg=-fuse-ld=ld",
+  "-Cpanic=abort",
+  "-Ctarget-cpu=native",
+  "-Zthreads=64",
+]
+
+[build]
+# Use more parallel jobs
+jobs = 14
+
+[target.aarch64-unknown-linux-gnu]
+linker = "aarch64-linux-gnu-gcc"
+rustflags = [
+  "--cfg",
+  "has_std",
+  "-Csplit-debuginfo=unpacked",
+  "-Ccodegen-units=1",
+  "-Clink-arg=-B/usr/local/libexec/mold",
+  "-Cpanic=abort",
+  "-Ctarget-cpu=neoverse-n1",
+]

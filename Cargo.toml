@@ -1,3 +1,5 @@
+cargo-features = ["codegen-backend"]
+
 [package]
 name = "michibot"
 version = "0.1.0"
@@ -16,3 +18,20 @@ tokenizers = { version = "0.21.1", default-features = false, features = [
 [workspace]
 members = ["burn_inference"]
 resolver = "2"
+
+[profile.dev]
+debug = 0
+opt-level = 0
+
+[profile.release]
+lto = "off"        # Disable LTO for much faster linking (minor runtime cost)
+codegen-units = 14 # Parallel codegen (matches CPU cores)
+opt-level = 3      # Full optimization
+
+[profile.release-fast]
+inherits = "release"
+codegen-backend = "cranelift"
+opt-level = 2
+
+[profile.dev.package.burn_inference]
+opt-level = 0

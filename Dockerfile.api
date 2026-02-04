@@ -1,0 +1,27 @@
+# Dockerfile for Burn API server (michi-api)
+# Uses pre-built binary from cargo zigbuild cross-compilation
+
+FROM debian:bookworm-slim
+
+WORKDIR /app
+
+# Install Vulkan dependencies for WGPU
+RUN apt-get update && apt-get install -y \
+    libvulkan1 \
+    mesa-vulkan-drivers \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy the pre-built binary (from cargo zigbuild)
+COPY target/aarch64-unknown-linux-gnu/release/api_server /app/api_server
+
+# Set environment variables
+ENV RUST_LOG=info
+ENV MODEL_PATH=/model/model.bpk
+ENV TOKENIZER_PATH=/model/tokenizer.json
+
+# Expose the API port
+EXPOSE 3001
+
+# Run the API server
+ENTRYPOINT ["/app/api_server"]
